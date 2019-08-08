@@ -2,6 +2,9 @@
 <head>
 <link rel="stylesheet"  href="/css/styles.css">
 </head>
+
+{{> menu}}
+
     <body>
     <h1>Movie Details</h1>
 
@@ -11,8 +14,6 @@
                 <h2>Description: {{description}}</h2>
                 <h2>Genre: {{genre}}</h2>
                 <img id="moviePoster" src="{{posterURL}}"/> 
-                <button>Delete</button>
-                <input type="hidden" name="movieID" value="{{uuid}}">
             </form>
         {{/movie}}
 

@@ -15,9 +15,8 @@
                 <button>Delete</button>
                 <input type="hidden" name="movieID" value="{{uuid}}">
             </form>
-            <form id="moreDetailsButton" action="/movies/" method="POST">
+            <form id="moreDetailsButton" action="/movies/{{uuid}}" method="GET">
               <button>More Details</button>
-              <input type="hidden" name="movieID" value="{{uuid}}">
             </form>
         {{/movies}}
 
