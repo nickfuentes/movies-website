@@ -1,0 +1,23 @@
+body {
+    background-color: lightblue;
+}
+
+form {
+    display :flex;
+    flex-direction: column;
+    background-color: lightcoral;
+}
+
+form button {
+    width: 100px;
+    margin: 20px auto auto auto;
+}
+
+#movieList {
+    text-align: center;
+}
+
+#moviePoster {
+    width: 300px;
+    margin: auto;
+}

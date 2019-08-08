@@ -1,0 +1,22 @@
+<html>
+<head>
+<link rel="stylesheet"  href="/css/styles.css">
+</head>
+    <body>
+<h1 id="createTitlePage">Create Your Movie</h1>
+
+       <form id="createMovie" action="/movies/create" method="POST"">
+            <span>Movie Title:</span>
+            <input type="text" name="title" />
+            <span>Movie Description:</span>
+            <textarea type="text" name="description"></textarea>
+            {{! <input type="text" name="description" /> }}
+            <span>Genre:</span>
+            <input type="text" name="genre" />
+            <span>Movie Poster URL:</span>
+            <input type="text" name="posterURL" />
+            <button>Save</button>
+       </form>
+
+    </body>
+</html>
