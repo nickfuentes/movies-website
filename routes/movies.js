@@ -30,23 +30,21 @@ router.post("/create", (req, res) => {
     let movie = new Movie(title, description, genre, posterURL)
 
     movies.push(movie)
-    console.log(movies)
+
     res.redirect("/movies")
 })
 
 router.get("/:movieId", (req, res) => {
-    let movieId = req.params.movieId
-    console.log(movieId)
-    //res.json({genre: genre})
-    res.send(`The genre is ${movieId}`)
+    let movieID = req.params.movieID
+
+    let movie = [{ title: "Batman", genre: "Action" }]
+    console.log(movieID)
+    res.render("movie-details", { movie: movie })
 })
 
 // Deletes the movie by the movie title
-router.post("/delete-movie", (req, res) => {
+router.post("/delete", (req, res) => {
     let movieID = req.body.movieID
-    // console.log("Trying to Delete movie")
-    // console.log(movieID)
-    // console.log(movies)
 
     function removeMovie(movies, movieID) {
 

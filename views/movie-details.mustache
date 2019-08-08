@@ -5,8 +5,8 @@
     <body>
     <h1>Movie Details</h1>
 
-        {{#movies}}
-            <form id="movieList" action="/movies/delete-movie" method="POST" >
+        {{#movie}}
+            <form id="movieList" action="/movies/:movieID" method="POST" >
                 <h1>{{title}} </h1>
                 <h2>Description: {{description}}</h2>
                 <h2>Genre: {{genre}}</h2>
@@ -14,7 +14,7 @@
                 <button>Delete</button>
                 <input type="hidden" name="movieID" value="{{uuid}}">
             </form>
-        {{/movies}}
+        {{/movie}}
 
     </body>
 </html>

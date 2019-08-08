@@ -2,15 +2,22 @@
 <head>
 <link rel="stylesheet"  href="/css/styles.css">
 </head>
+
+{{> menu}}
+
     <body>
     <h1>Movies</h1>
 
         {{#movies}}
-            <form id="movieList" action="/movies/delete-movie" method="POST" >
+            <form id="movieList" action="/movies/delete" method="POST" >
                 <h1>{{title}} </h1>
                 <img id="moviePoster" src="{{posterURL}}"/> 
                 <button>Delete</button>
                 <input type="hidden" name="movieID" value="{{uuid}}">
+            </form>
+            <form id="moreDetailsButton" action="/movies/" method="POST">
+              <button>More Details</button>
+              <input type="hidden" name="movieID" value="{{uuid}}">
             </form>
         {{/movies}}
 
